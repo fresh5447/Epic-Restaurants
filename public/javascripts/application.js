@@ -18,7 +18,7 @@ $(function() {
 
 
 
-///////////    BEGIN RESTAURANT QUERY  /////////
+///////////    BEGIN RESTAURANT QUERY  ////////////
 
 
         var Restaurant = Parse.Object.extend("Restaurant");
