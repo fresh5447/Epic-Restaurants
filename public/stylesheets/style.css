@@ -27,7 +27,7 @@ html {
                                 }
 body {
     margin-left: 100px;
-    margin-right: 100px;
+    margin-right: ;
 }
 article,
 aside,
@@ -4563,8 +4563,8 @@ a.list-group-item.active > .badge,
 .jumbotron {
     padding: 30px;
     margin-bottom: 30px;
-    color: inherit;
-    background-color: #eee;
+    /*color: inherit;*/
+    background-image: url('/images/tacos.jpg');
 }
 .jumbotron h1,
 .jumbotron .h1 {
