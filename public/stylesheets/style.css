@@ -29,6 +29,18 @@ body {
     margin-left: 100px;
     margin-right: ;
 }
+
+.glowing-border {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+}
+
+.glowing-border:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
 article,
 aside,
 details,
@@ -916,6 +928,8 @@ body {
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 input,
 button,
@@ -1233,6 +1247,8 @@ a.bg-danger:hover {
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eee;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 ul,
 ol {
@@ -2434,6 +2450,7 @@ input[type="month"].input-lg {
 }
 .form-group {
     margin-bottom: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .radio,
 .checkbox {

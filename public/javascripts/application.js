@@ -27,7 +27,7 @@ $(function() {
             success: function (results) {
                 var resList = '';
                 results.forEach(function (r, i) {
-                    resList = $("<option />", { class: 'restaurant', id: r.id, text: r.attributes.Name });
+                    resList = $("<option />", { class: 'restaurant glowing-border glowing-border:focus', id: r.id, text: r.attributes.Name });
                     $('#restaurant').append(resList);
                 });
             },
