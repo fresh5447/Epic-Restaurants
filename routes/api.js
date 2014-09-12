@@ -8,7 +8,7 @@ mongoose.connect(process.env.MONGOHQ_URL);
 var restaurantSchema = new mongoose.Schema({
     code: String,
     name: String,
-    menuList: {name: String, price: String}
+    menuList: [{}]
 });
 
 

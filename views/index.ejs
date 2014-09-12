@@ -10,6 +10,7 @@
     <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400' rel='stylesheet' type='text/css'>    <!-- <script src="cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script> -->
      <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/buttons.css" rel="stylesheet">
     <title></title>
 </head>
 <body>
@@ -18,7 +19,7 @@
 
     <li><a href="order.html">Order</a></li>
     <script>
-        console.log(alert);
+
     </script>
 </ul>
 
@@ -37,18 +38,37 @@
 
 <!-------------SELECT A RESTARAUNT AND MENU ITEM WILL APPEAR------------->
 
+<div>
+    <ul class="resDivContainer">
+
+    </ul>
+</div>
+
+
+
 <div class="main-page-box">
     <div class="row">
 
         <!--------RESTARAUNT LIST-------->
-        <script id="template" type="text/x-handlebars-template">
+
         <div class="restaurantList">
-            {{#each restaurants}}
-            <select id="restaurant">
-            {{/each}}
+            <script id="restaurant" type="text/x-handlebars-template">
+
+            <select class="restaurant">
+                {{#each restaurants}}
+                <option id="{{code}}">{{name}}</option>
+                {{/each}}
             </select>
+
+                <!--<select class="restaurant">-->
+                    <!--{{#each  menuItems}}-->
+                    <!--<option id="{{code}}">{{title}}</option>-->
+                    <!--<option id="{{code}}">{{price}}</option>-->
+                    <!--{{/each}}-->
+                <!--</select>-->
+
         </div>
-        </script>
+      </script>
 
     </div>
 
@@ -90,15 +110,16 @@
     <button id="submit" type="submit" class="btn btn-default">Submit</button>
 </div>
 
-<h1>Add Restaurant</h1>
 
-<form role="form">
+<button id="resAdder" class="btn btn-2 btn-2g">Add Restauraunt</button>
+
+<form role="form" id="resForm">
     <div class="form-group">
-        <label  id="resName">{{resName}}</label>
+        <label  id="resName">Restaurant Name</label>
         <input type="name" class="form-control" placeholder="Name">
     </div>
     <div class="form-group">
-        <label id="menuItem">{{menuItem}}</label>
+        <label id="menuItem">{{menuItem}</label>
         <input class="form-control" placeholder="menuItem">
     </div>
 

@@ -22,5 +22,3 @@ router.get('/app', function(req, res) {
 module.exports = router;
 
 
-// $.ajax("/endpoint", {type: "POST", data{}}).then(
-// )
