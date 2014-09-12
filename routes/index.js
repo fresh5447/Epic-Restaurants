@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index');
+    res.render('index', { title: 'Epic Restaurants', description:'At least in my opinion.'});
 
 });
 
@@ -20,4 +20,7 @@ router.get('/app', function(req, res) {
 
 
 module.exports = router;
-4
+
+
+// $.ajax("/endpoint", {type: "POST", data{}}).then(
+// )

@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400' rel='stylesheet' type='text/css'>    <!-- <script src="cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script> -->
-    <link href="stylesheets/style.css" rel="stylesheet">
+     <link href="stylesheets/style.css" rel="stylesheet">
     <title></title>
 </head>
 <body>
@@ -16,6 +17,9 @@
     <li class="active"><a href="#">Home</a></li>
 
     <li><a href="order.html">Order</a></li>
+    <script>
+        console.log(alert);
+    </script>
 </ul>
 
 <!-----------------------HEADER SECTION ----------->
@@ -36,21 +40,15 @@
 <div class="main-page-box">
     <div class="row">
 
-        <!--<style>
-
-            .menuList{
-                display: none;
-            }
-
-        </style> -->
-
         <!--------RESTARAUNT LIST-------->
+        <script id="template" type="text/x-handlebars-template">
         <div class="restaurantList">
-
+            {{#each restaurants}}
             <select id="restaurant">
-
+            {{/each}}
             </select>
         </div>
+        </script>
 
     </div>
 
@@ -59,8 +57,8 @@
 
         <div class="row">
             <ul id="menuItem">
-                <option value="Please Select Value">Please select value</option> </ul>
-
+             <input type="checkbox" data-value="price">
+           </ul>
         </div>
 
 
@@ -74,7 +72,7 @@
 </div>
 
 <!---------------USERS INFORMATION----------->
-<div role="fm">
+<div role="form">
     <div class="form-group">
         <label>Email address</label>
         <input type="email" id="emailAddress" name="email"required placeholder="Email address">
@@ -92,6 +90,20 @@
     <button id="submit" type="submit" class="btn btn-default">Submit</button>
 </div>
 
+<h1>Add Restaurant</h1>
+
+<form role="form">
+    <div class="form-group">
+        <label  id="resName">{{resName}}</label>
+        <input type="name" class="form-control" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <label id="menuItem">{{menuItem}}</label>
+        <input class="form-control" placeholder="menuItem">
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
 
 
 
