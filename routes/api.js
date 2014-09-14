@@ -5,6 +5,32 @@ var router = express.Router();
 var mongoose = require("mongoose");
 mongoose.connect(process.env.MONGOHQ_URL);
 
+var logSchema = new mongoose.Schema({
+    code: String,
+    responseTime: Number,
+    endpoint: String
+});
+
+var Log = mongoose.model('log', logSchema);
+
+app.use(function(req, res, next){
+    var start = Date.now();
+    res.on("finish", function(){
+        var duration = Date.now - start;
+        var log = new Log ( { responseTime: duration, endpoint: req.originalUrl});
+        log.save();
+    var requestLogger = function(req){
+        Object.keys(req);
+        console.log(requestLogger());
+    }
+    });
+    next();
+});
+
+
+
+//requestLogger needs to log keys of middleware
+
 var restaurantSchema = new mongoose.Schema({
     code: String,
     name: String,
@@ -80,5 +106,12 @@ router.get("/restaurants/:restaurantCode", function(req, res) {
         }
     });
 });
+
+
+//router.get("/avatar/:email", function(req, res){
+//    var md5email = myLib.md5(req.params.email);
+//    res.redirect("http://www.gravatar.com/avatar/" + md5email);
+//});
+
 
 module.exports = router;
