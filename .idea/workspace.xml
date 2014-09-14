@@ -136,8 +136,8 @@
           <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/routes/api.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.64871794" vertical-offset="932" max-vertical-offset="1860">
-                  <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.64871794" vertical-offset="932" max-vertical-offset="1845">
+                  <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -626,8 +626,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64871794" vertical-offset="932" max-vertical-offset="1860">
-          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.64871794" vertical-offset="932" max-vertical-offset="1845">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
       </provider>

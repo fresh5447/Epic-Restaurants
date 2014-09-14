@@ -77,7 +77,6 @@ router.put('/restaurants/:restaurantCode', function(req, res) {
             console.log('Error on lookup!', err);
             return res.json(500, { error: 'could not process request'});
         }
-//comment
         if (restaurant) {
             if (req.body.name) {
                 restaurant.name = req.body.name;
