@@ -113,6 +113,6 @@ router.get("/restaurants/:restaurantCode", function(req, res) {
 //    res.redirect("http://www.gravatar.com/avatar/" + md5email);
 //});
 
-//comment
+
 
 module.exports = router;
